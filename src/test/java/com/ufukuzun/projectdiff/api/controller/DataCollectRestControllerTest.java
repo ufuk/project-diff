@@ -26,7 +26,7 @@ public class DataCollectRestControllerTest extends BaseControllerIntegrationTest
 
     @Test
     public void shouldSaveOlderVersionOfData() throws Exception {
-        getMockMvc().perform(post("/1/left")
+        getMockMvc().perform(post("/diff/1/left")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content("{\"data\":\"aGlyZSBtZSwgeW91IHdpbGwgbm90IHJlZ3JldCA6KQ==\"}"))
                 .andExpect(status().isOk());
@@ -39,7 +39,7 @@ public class DataCollectRestControllerTest extends BaseControllerIntegrationTest
 
     @Test
     public void shouldSaveNewerVersionOfData() throws Exception {
-        getMockMvc().perform(post("/1/right")
+        getMockMvc().perform(post("/diff/1/right")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content("{\"data\":\"aGlyZSBtZSwgeW91IHdpbGwgbm90IHJlZ3JldCA6KQ==\"}"))
                 .andExpect(status().isOk());

@@ -35,7 +35,7 @@ public class DataDifferenceRestControllerTest extends BaseControllerIntegrationT
 
         when(dataDifferenceService.getDataDifferencesFor("1")).thenReturn(dataDifferencesResponse);
 
-        getMockMvc().perform(get("/1"))
+        getMockMvc().perform(get("/diff/1"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("hasDifferences", equalTo(true)))
                 .andExpect(jsonPath("hasEqualLengths", equalTo(true)))

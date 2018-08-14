@@ -3,12 +3,10 @@ package com.ufukuzun.projectdiff.api.controller;
 import com.ufukuzun.projectdiff.api.dto.DataCollectRequest;
 import com.ufukuzun.projectdiff.api.service.DataCollectService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("diff")
 public class DataCollectRestController {
 
     @Autowired
